@@ -1,0 +1,65 @@
+import numpy
+board=numpy.array([["-","-","-"],["-","-","-"],["-","-","-"]])
+player1="x"
+player2="o"
+# placing the symbol for the players
+def place(symbol):
+  print(numpy.matrix(board))
+  while(True):
+    row=int(input("tell me the row number : "))
+    column=int(input("tell me the column number : "))
+    if row<3 and row>=0 and column<3 and column>=0 and board[row][column]=="-":
+      break;
+    else:
+      print("pls! enter a vallid input")
+  board[row][column]=symbol
+# defing the winning condition for player
+def won(symbol):
+  return checkrows(symbol)|checkcolumns(symbol)|checkdiagonals(symbol)
+# checking for each rows
+def checkrows(symbol):
+  for x in range(3):
+    count=0
+    for y in range(3):
+      if board[x][y]==symbol:
+        count=count+1
+    if count==3:
+      print(symbol,"won")
+      return True
+    return False
+# checking for each columns
+def checkcolumns(symbol):
+  for x in range(3):
+    count=0
+    for y in range(3):
+      if board[y][x]==symbol:
+        count=count+1
+    if count==3:
+      print(symbol,"won")
+      return True
+    return False
+# checking for each of the diagonal
+def checkdiagonals(symbol):
+  if board[1][1]==board[0][2] and board[1][1]==board[2][0] and board[1][1]==board[0][0] and board[1][1]==board[2][2] and board[1][1]==symbol:
+    return True
+  else:
+    return False
+# initilzing the play part setup
+def play():
+  for x in range(9):
+    if x%2==0:
+      print("player 1 turn........")
+      place(player1)
+      if won(player1):
+        print("player 1 won ")
+        break
+    else:
+      print("player 2 turn.......")
+      place(player2)
+      if won(player2):
+        print("player 2 won")
+        break
+  if not won(player1) or won(player2):
+    print("the match is declared as draw")
+
+play()
