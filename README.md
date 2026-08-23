@@ -1,11 +1,6 @@
 # PYTHON-Project-Journey
 A collection of Python projects developed from beginner to advanced level, covering programming fundamentals, automation, APIs, data analysis, OOP, databases, and AI/ML.
 
-## Mentor / Instructor
-
-**Dr. Angela Yu**  
-Developer and Lead Instructor
-
 # Python Projects: Beginner to Advanced
 
 A collection of Python projects built while learning and improving my programming skills. The repository progresses from basic Python programming to intermediate applications and advanced projects involving APIs, databases, data analysis, automation, and AI/ML.
@@ -109,7 +104,8 @@ Through these projects, I am working on:
 * [ ] AI projects
 * [ ] Full-stack Python project
 
-## Author / Coder
+ 
+## Author
 
 ***Dev Mittal***
 
