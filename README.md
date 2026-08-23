@@ -31,6 +31,7 @@ Projects focused on learning Python fundamentals.
 | Reeborg's Maze Problem   | Variables, operators, functions    |
 | Number Guessing Game     | Loops, conditionals                |
 | Rock Paper Scissors      | Conditionals, random module        |
+| Tic Tac Toe              | Lists, Conditionals, Numpy         |
 | Treasure Island          | Nested conditionals                |
 | Password Generator       | Loops, strings, random             |
 | Bidding Game             | Lists, dictionaries, functions     |
