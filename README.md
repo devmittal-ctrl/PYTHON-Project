@@ -28,9 +28,10 @@ Projects focused on learning Python fundamentals.
 | Rock Paper Scissors      | Conditionals, random module        |
 | Tic Tac Toe              | Lists, Conditionals, Numpy         |
 | Treasure Island          | Nested conditionals                |
-| Password Generator       | Loops, strings, random             |
-| PY Bidding Game          | Lists, dictionaries, functions     |
+| Py Password Generator    | Loops, strings, random             |
+| Py Bidding Game          | Lists, dictionaries, functions     |
 | Hang Man Game            | Conditions, functions              |
+| Caser Cipher Generation  | Conditions, functions, random      |
 | Higher Lower             | Lists, dictionaries                |
 | Black Jack Capstone Work | Lists, dictionaries                |
 
