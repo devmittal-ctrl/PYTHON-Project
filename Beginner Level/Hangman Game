@@ -1,0 +1,181 @@
+# doing hangamn game 
+import random
+stages = {
+        10: """
+         _______
+        |/      
+        |       
+        |       
+        |       
+        |
+        |______
+        """,
+
+        9: """
+         _______
+        |/      |
+        |       |
+        |       |
+        |       |
+        |
+        |______
+        """,
+
+        8: """
+         _______
+        |/      |
+        |       |
+        |       |
+        |       |
+        |       O
+        |______
+         xxxxxx
+        """,
+
+        7: """
+         _______
+        |/      |
+        |       |
+        |       |
+        |       O
+        |       |
+        |______
+         xxxxxx
+        """,
+        6: """
+         _______
+        |/      |
+        |       |
+        |       |
+        |       |
+        |       |
+        |       O
+        |      /|
+        |______
+         xxxxxx
+        """,
+
+        5: """
+         _______
+        |/      |
+        |       |
+        |       |
+        |       |
+        |       |
+        |       O
+        |      /|\\
+        |______
+         xxxxxx
+        """,
+
+        4: """
+         _______
+        |/      |
+        |       |
+        |       |
+        |       O
+        |      /|\\
+        |      /
+        |      
+        |______
+         xxxxxx
+        """,
+
+        3: """
+         _______
+        |/      |
+        |       |
+        |       |
+        |       O
+        |      /|\\
+        |      / \\
+        |      
+        |______
+         xxxxxx
+        """,
+
+        2: """
+         _______
+        |/      |
+        |       |
+        |       O
+        |      /|\\
+        |      / \\     
+        |______
+         xxxxxx
+        """,
+
+        1: """
+         _______
+        |/      |
+        |       O
+        |      /|\\
+        |      / \\
+        |       
+        |
+        |______
+         xxxxxx
+        """,
+
+        0: """
+         _______
+        |/      |
+        |       X
+        |      /|\\
+        |      / \\
+        |
+        |______
+         xxxxxx
+        """
+}
+print("Welcome to hangman game : ")
+print("Loading ...................")
+words_list=["hippopotamus","elephant","dolphin","bat","tiger","lion","cheetah"]
+placeBlanks=""
+count=10
+game_continue=True
+current_value=[]
+display_of_current=""
+choice_selected=random.choice(words_list)
+print(choice_selected)
+length_of_word=len(choice_selected)
+# placing the number of the blanks as the word have 
+for s in range(length_of_word):
+    placeBlanks+="_"
+print(placeBlanks)
+# game condition 
+while game_continue:
+    print("you have a count of, ",count,"chances to save person")
+    ask_of_letter=input("enter a letter : ").lower()
+    # repeated letter 
+    if ask_of_letter in current_value:
+        print("you entered a repeated value ")
+        continue
+    # if the letter belongs to my selected choice 
+    if ask_of_letter in choice_selected:
+        print("the selected letter is in word")
+        current_value.append(ask_of_letter)
+        display_of_current=""
+        for t in choice_selected:
+            if t in current_value:
+                display_of_current+=t
+            else:
+                display_of_current+="_"
+    else:
+        print("you made a wrong guess ")
+        count-=1
+        print(stages[count])
+    print(display_of_current)
+    # ending condition 
+    if display_of_current==choice_selected:
+        print('you saved the person ')
+        game_continue=False
+    if count==0:
+        # winiing 
+        if "_" not in display_of_current:
+            print('you saved the person ')
+            game_continue=False
+            # loosing
+        else:
+           print("you loose the person")
+        game_continue=False
