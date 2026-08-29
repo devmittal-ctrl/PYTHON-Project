@@ -32,7 +32,7 @@ Projects focused on learning Python fundamentals.
 | Py Bidding Game          | Lists, dictionaries, functions     |
 | Hang Man Game            | Conditions, functions              |
 | Caser Cipher Generation  | Conditions, functions, random      |
-| Black Jack Capstone Work | Lists, dictionaries                |
+| Black Jack / 21          | Lists, dictionaries                |
 
 ### 02. Intermediate
 
