@@ -1,0 +1,38 @@
+# 
+# black jack / 21
+# ignorining the ace handling as fixing it as 11
+import random
+list_of_cards= [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+game = True
+player = random.choice(list_of_cards)
+player2 = random.choice(list_of_cards)
+dealer = random.choice(list_of_cards)
+dealer2 = random.choice(list_of_cards)
+sum_player = player + player2
+sum_dealer = dealer + dealer2
+print("player : ", player, player2, " sum : ", sum_player)
+print("dealer : ", dealer, "X")
+while game:
+    a = input(" hit to play and stand to show : ").lower()
+    if a == "hit":
+        player = random.choice(list_of_cards)
+        print("player : ", player)
+        sum_player += player
+        print("sum of the player : ", sum_player)
+        if sum_player > 21:
+            print("dealer win")
+            game = False
+    elif a == "stand":
+        while sum_dealer < 17:
+            dealer = random.choice(list_of_cards)
+            sum_dealer += dealer
+        print("dealer cards sum : ", sum_dealer)
+        if sum_dealer > 21:
+            print("player win")
+        elif sum_player > sum_dealer:
+            print("player win")
+        elif sum_player < sum_dealer:
+            print("dealer win")
+        else:
+            print("draw")
+        game = False
