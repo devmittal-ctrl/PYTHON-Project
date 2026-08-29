@@ -23,13 +23,13 @@ Projects focused on learning Python fundamentals.
 
 | Project                  | Concepts                           |
 | ------------------------ | ---------------------------------- |
-| Reeborg's Maze Problem   | Variables, operators, functions    |
+| Maze Problem             | Variables, operators, functions    |
 | Number Guessing Game     | Loops, conditionals                |
 | Rock Paper Scissors      | Conditionals, random module        |
 | Tic Tac Toe              | Lists, Conditionals, Numpy         |
 | Treasure Island          | Nested conditionals                |
 | Password Generator       | Loops, strings, random             |
-| Bidding Game             | Lists, dictionaries, functions     |
+| PY Bidding Game          | Lists, dictionaries, functions     |
 | Hang Man Game            | Conditions, functions              |
 | Higher Lower             | Lists, dictionaries                |
 | Black Jack Capstone Work | Lists, dictionaries                |
