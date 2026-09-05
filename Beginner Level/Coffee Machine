@@ -1,0 +1,86 @@
+# coffee machine 
+print("Welcome To Coffee Machine\n")
+work=1
+# menu of the coffeee shop 
+menu={
+    "espresso":{
+        "ingredients":{
+            "water":50,
+            "coffee":10
+        },
+        "price":1.5,
+    },
+    "latte":{
+        "ingredients":{
+            "water":200,
+            "coffee":24,
+            "milk":150
+        },
+        "price":2.5,
+    },
+    "cappuccino":{
+        "indegridents":{
+            "water":250,
+            "coffee":24,
+            "milk":100
+        },
+        "price":3.0,
+    }
+}
+# report of the items that a cofee machine have in stock 
+resource={
+    "water":2000,
+    "milk":2000,
+    "coffee":500,
+    "money earned":0
+}
+# checking for the sufficient resources if we have to process 
+def check_resources(for_use):
+    for item in for_use:
+        if for_use[item]>resource[item]:
+            print("Soory we can't process your order ")
+            return False
+    print("Yes, your order is placed successfully 😇")
+    return True
+#  processing the coins 
+def process_coins():
+    print("insert coins : ")
+    total=0
+    total+=int(input("how many quaters "))*0.25
+    total+=int(input("how many dimes "))*0.1
+    total+=int(input("how many pennis "))*0.01
+    total+=int(input("how many nickels "))*0.05
+    return total
+# reduction to resourecse that machine have 
+def depletion_of_resources(use):
+    for items in use:
+        resource[items]-=use[items]
+    print("here is your drink")
+    print("\nNext Customer Pls !! ")  
+
+# main code 
+while work:
+    a=input('“What would you like? (espresso/latte/cappuccino): " ').lower()
+    if(a=="espresso" or a=="latte" or a=="cappuccino"):
+        print("your order is being  palcing for ",a,"......\nPls.. Wait for some time ")
+        check=menu[a]
+        check_resources(check["ingredients"])
+        if check_resources:
+            amount=process_coins()
+            if(amount>check["price"]):
+                print("the transaction is successful .. ")
+                chnage=amount-check["price"]
+                resource["money earned"]+=check["price"]
+                print("here you have the change : ",chnage)
+                depletion_of_resources(check["ingredients"])
+            elif amount==check["price"]:
+                print("the transcation is succesful ")
+                depletion_of_resources(check["ingredients"])
+            else:
+                print("sorry insert a proper amount of ",check["price"])
+
+    elif(a=="off"):
+        print("turning of the machine...")
+        work=0
+    elif(a=="report"):
+        print("the report by the machine is : ",print(resource))
