@@ -30,6 +30,7 @@ Projects focused on learning Python fundamentals.
 | Treasure Island          | Nested conditionals                |
 | Py Password Generator    | Loops, strings, random             |
 | Py Bidding Game          | Lists, dictionaries, functions     |
+| Coffee Machine           | Lists, dictionaries, functions     |
 | Hang Man Game            | Conditions, functions              |
 | Caser Cipher Generation  | Conditions, functions, random      |
 | Black Jack / 21          | Lists, dictionaries                |
