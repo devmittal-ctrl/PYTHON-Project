@@ -41,6 +41,7 @@ Projects focused on writing more structured and practical Python applications.
 
 | Project                | Concepts                           |
 | ---------------------- | ---------------------------------- |
+| Quiz Perfora           | OOP, file handling                |
 | Contact Book           | OOP, file handling                 |
 | Bank Management System | OOP, data structures               |
 | File Organizer         | OS module, automation              |
