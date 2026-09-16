@@ -43,6 +43,7 @@ Projects focused on writing more structured and practical Python applications.
 | ---------------------- | ---------------------------------- |
 | Quiz Perfora           | OOP, file handling                 |
 | Hirst's First Painting | Colorgram, TurtleGraphics          |
+| Creature Race          | TurtleGraphics                     |
 | Contact Book           | OOP, file handling                 |
 | Bank Management System | OOP, data structures               |
 | File Organizer         | OS module, automation              |
