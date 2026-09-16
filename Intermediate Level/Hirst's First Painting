@@ -1,0 +1,50 @@
+import random
+import turtle
+turtle.colormode(255)
+tim=turtle.Turtle()
+c_list=[(233, 232, 231), (230, 232, 236), (234, 230, 232), (224, 231, 226), (206, 161, 85), (56, 89, 130)]
+tim.speed("fastest")
+tim.penup()
+tim.setheading(225) # mid way b/w 270 and 180 => in order to make it to down
+tim.forward(400)
+tim.pendown()
+tim.setheading(0) # lock the heading here
+count=12
+for d in range(count):
+    if(d==0):
+             for _ in range(13):
+                tim.dot(20,random.choice(c_list))
+                tim.penup()
+                tim.forward(50)
+                tim.pendown()
+    elif(d%2!=0):
+        tim.setheading(90)
+        tim.penup()
+        tim.forward(50)
+        tim.pendown()
+        tim.left(90)
+        tim.penup()
+        tim.forward(50)
+        tim.pendown()
+        for _ in range(13):
+            tim.dot(20,random.choice(c_list))
+            tim.penup()
+            tim.forward(50)
+            tim.pendown()
+    elif(d%2==0):
+        tim.setheading(90)
+        tim.penup()
+        tim.forward(50)
+        tim.pendown()
+        tim.right(90)
+        tim.penup()
+        tim.forward(50)
+        tim.pendown()
+        for _ in range(13):
+            tim.dot(20,random.choice(c_list))
+            tim.penup()
+            tim.forward(50)
+            tim.pendown()
+             
+screen=turtle.Screen()
+screen.exitonclick()
