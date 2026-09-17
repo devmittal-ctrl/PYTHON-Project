@@ -2,9 +2,11 @@
 import turtle
 import random
 screen=turtle.Screen()
+screen.bgcolor("black")
 screen.setup(width=500,height=500)
-user=screen.textinput(title="Turtle Race",prompt="Make a bet on who win!")
-color_turtle=["red","blue","black","green","yellow","orange","purple","brown"]
+screen.title("Turtle Race")
+user=screen.textinput(title="Welcome To Race",prompt="Make a bet on who win!")
+color_turtle=["red","blue","white","green","yellow","orange","purple","brown"]
 y_pos=[-100,-70,-40,-10,20,50,80,110]
 all_turtle=[]
 
@@ -25,11 +27,7 @@ while game:
         dis=random.randint(1,10)
         t.forward(dis)
         if t.xcor()==230:
-            win=t.pencolor()
-            if win==user:
-                print("you won")
-            else:
-                print("lose")
             game=False
+            break
 
 screen.exitonclick()
